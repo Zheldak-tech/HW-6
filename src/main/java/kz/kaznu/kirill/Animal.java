@@ -13,21 +13,21 @@ public class Animal {
         this.stamina = stamina;
     }
     public int run(int distance) {
-        System.out.println(name + " пробежал" + distance + " метров за " + distance/speedBeg + " с");
+        System.out.println(name + " пробежал " + distance + " метров за " + distance/speedBeg + " с");
         for (int i = 0; i < distance; i++) {
             stamina -= 1;
             if (stamina < 0) {
                 System.out.println(name + " устал");
-                return -1;
+                break;
             }
         }
         return distance;
     }
     public int swim(int distance) {
-        System.out.println(name + " проплыл" + distance + " метров за " + distance/speedBeg + " с");
+        System.out.println(name + " проплыл " + distance + " метров за " + distance/speedBeg + " с");
         return distance;
     }
     public void info(){
-        System.out.println("Это животное: " + name + ", выносливость:" + stamina);
+        System.out.println("Это животное: " + name + ", выносливость: " + stamina);
     }
 }

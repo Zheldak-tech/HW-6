@@ -6,11 +6,12 @@ public class Cat extends Animal{
 
     }
     public int run(int distance) {
-        System.out.println(name + " пробежал" + distance + " метров за " + distance/speedBeg + " с");
+        System.out.println(name + " пробежал " + distance + " метров за " + distance/speedBeg + " с");
         for (int i = 0; i < distance; i++) {
             stamina -= 1;
             if (stamina < 0) {
                 System.out.println(name + " устал");
+                break;
             }
         }
         return distance;

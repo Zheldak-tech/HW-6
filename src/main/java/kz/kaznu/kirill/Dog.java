@@ -6,13 +6,16 @@ public class Dog extends Animal{
 
     }
     public int run(int distance) {
-        System.out.println(name + " пробежал" + distance + " метров за " + distance/speedBeg + " с");
+        System.out.println(name + " пробежал " + distance + " метров за " + distance/speedBeg + " с");
         for (int i = 0; i < distance; i++) {
             stamina -= 1;
             if (stamina < 0) {
                 System.out.println(name + " устал");
+                break;
             }
         }
+
+
         return distance;
     }
 
@@ -21,6 +24,7 @@ public class Dog extends Animal{
         super.swim(distance);
         for (int i = 0; i < stamina; i++) {
             stamina -= 2;
+            break;
         }
         return super.swim(distance);
     }
